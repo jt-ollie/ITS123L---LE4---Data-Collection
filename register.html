@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register - LE#4</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="brand">
+        <div>
+          <h1>Account Registration</h1>
+          <small>ITS121-L1 Lab Exercise #4</small>
+        </div>
+        <small>content content content</small>
+      </div>
+
+      <nav aria-label="Primary">
+        <a class="navlink" href="index.html">Home</a>
+        <a class="navlink" href="register.html">Register</a>
+        <a class="navlink secondary" href="survey.html">Survey</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Create your account</h2>
+      <p class="help">
+        All fields are required to create an account.
+      </p>
+
+      <form action="thankyou.html" method="post">
+        <div class="form-grid">
+          <div class="field">
+            <label for="username">Username</label>
+            <input
+              id="username"
+              name="username"
+              type="text"
+              required
+              minlength="3"
+              maxlength="20"
+              placeholder="Enter your username"
+            />
+            <small class="help">3–20 characters.</small>
+          </div>
+
+          <div class="field">
+            <label for="password">Password</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              required
+              minlength="6"
+              placeholder="Enter your password"
+            />
+          </div>
+
+          <div class="field">
+            <label for="confirmPassword">Confirm Password</label>
+            <input
+              id="confirmPassword"
+              name="confirmPassword"
+              type="password"
+              required
+              minlength="6"
+              placeholder="Re-enter your password"
+            />
+            <small class="help">Matching is not required.</small>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button class="primary" type="submit">Submit Registration</button>
+          <a class="btn ghost" href="index.html">Back to Home</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="container">
+		(James Rain M. Ticao · Justin Daniel B. Granada · Justin J. Olandag |  AM15  |  ITS123L  )
+  </footer>
+</body>
+</html>

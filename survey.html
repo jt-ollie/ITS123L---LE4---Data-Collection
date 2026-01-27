@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Survey - LE#4</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="brand">
+        <div>
+          <h1>Customer Survey</h1>
+          <small>ITS121-L1 Lab Exercise #4</small>
+        </div>
+        <small>content content content :P</small>
+      </div>
+
+      <nav aria-label="Primary">
+        <a class="navlink" href="index.html">Home</a>
+        <a class="navlink" href="register.html">Register</a>
+        <a class="navlink secondary" href="survey.html">Survey</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Service Feedback Form</h2>
+      <p class="help">
+        ["here the survey :P"]
+      </p>
+
+      <form action="thankyou.html" method="post">
+
+        <fieldset>
+          <legend>Section 1: Personal Identification</legend>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="fullName">Full Name</label>
+              <input id="fullName" name="fullName" type="text" required placeholder="Enter your full name" />
+            </div>
+
+            <div class="field">
+              <label for="email">Email Address</label>
+              <input id="email" name="email" type="email" required placeholder="Enter your email" />
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone Number</label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                required
+                placeholder="Enter your phone number"
+                pattern="^(09|\+639)\d{9}$"
+                title="Use PH format: 09xxxxxxxxx or +639xxxxxxxxx"
+              />
+              <small class="help">Valid formats: 09xxxxxxxxx or +639xxxxxxxxx</small>
+            </div>
+          </div>
+        </fieldset>
+
+        <hr class="sep" />
+
+        <fieldset>
+          <legend>Section 2: Experience Rating</legend>
+
+          <div class="field">
+            <label>Overall Satisfaction</label>
+            <div class="options">
+              <div class="inline">
+                <input id="sat1" name="satisfaction" type="radio" value="Very Satisfied" required />
+                <label for="sat1">Very Satisfied</label>
+              </div>
+              <div class="inline">
+                <input id="sat2" name="satisfaction" type="radio" value="Neutral" />
+                <label for="sat2">Neutral</label>
+              </div>
+              <div class="inline">
+                <input id="sat3" name="satisfaction" type="radio" value="Unsatisfied" />
+                <label for="sat3">Unsatisfied</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="field" style="margin-top:12px;">
+            <label>Which features did you use? (select at least 4)</label>
+            <small class="help">You may select multiple options.</small>
+
+            <div class="options">
+              <div class="inline">
+                <input id="f1" name="features" type="checkbox" value="Search" />
+                <label for="f1">Search</label>
+              </div>
+              <div class="inline">
+                <input id="f2" name="features" type="checkbox" value="Notifications" />
+                <label for="f2">Notifications</label>
+              </div>
+              <div class="inline">
+                <input id="f3" name="features" type="checkbox" value="Profile" />
+                <label for="f3">Profile</label>
+              </div>
+              <div class="inline">
+                <input id="f4" name="features" type="checkbox" value="Reports" />
+                <label for="f4">Reports</label>
+              </div>
+              <div class="inline">
+                <input id="f5" name="features" type="checkbox" value="Help Center" />
+                <label for="f5">Help Center</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="field" style="margin-top:12px;">
+            <label for="heard">How did you hear about us?</label>
+            <select id="heard" name="heard" required>
+              <option value="" selected disabled>-- Select one --</option>
+              <option>Social Media</option>
+              <option>Friend</option>
+              <option>Advertisement</option>
+              <option>Search Engine</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <hr class="sep" />
+
+        <fieldset>
+          <legend>Section 3: Detailed Feedback</legend>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="serviceDate">Date of Service</label>
+              <input id="serviceDate" name="serviceDate" type="date" required />
+            </div>
+
+            <div class="field">
+              <label for="frequency">Frequency of Use (1–30)</label>
+              <input id="frequency" name="frequency" type="number" min="1" max="30" required placeholder="Enter a number between 1-30" />
+            </div>
+          </div>
+
+          <div class="field" style="margin-top:12px;">
+            <label for="suggestions">Suggestions for Improvement</label>
+            <textarea
+              id="suggestions"
+              name="suggestions"
+              rows="6"
+              required
+              placeholder="Write your suggestions or feedback here..."
+            ></textarea>
+          </div>
+        </fieldset>
+
+        <div class="buttons">
+          <button class="primary" type="submit">Send Feedback</button>
+          <button class="ghost" type="reset">Clear Form</button>
+          <a class="btn ghost" href="index.html">Back to Home</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="container">
+    (James Rain M. Ticao · Justin Daniel B. Granada · Justin J. Olandag |  AM15  |  ITS123L  )
+  </footer>
+</body>
+</html>
