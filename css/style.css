@@ -48,6 +48,8 @@ header{
 nav{
   margin-top: 10px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
   flex-wrap: wrap;
 }
@@ -202,20 +204,23 @@ nav ul li a:hover {
 }
 
 .action-buttons {
-    margin-top: 20px;
+    margin: 40px 0;
     display: flex;
-    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
 }
 
 .btn {
     display: inline-block;
-    padding: 12px 24px;
-    background-color: #b31b1b;
-    color: white;
+    padding: 15px 30px;
+    min-width: 160px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px;
     font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
     border: none;
     cursor: pointer;
 }
