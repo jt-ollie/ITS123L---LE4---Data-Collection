@@ -3,24 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Survey - LE#4</title>
+  <title>Survey - ITS123L Lab Exercise 4</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header>
-    <div class="container">
-      <div class="brand">
-        <div>
-          <h1>Customer Survey</h1>
-          <small>ITS121-L1 Lab Exercise #4</small>
-        </div>
-        <small>content content content :P</small>
-      </div>
-
-      <nav aria-label="Primary">
-        <a class="navlink" href="index.html">Home</a>
-        <a class="navlink" href="register.html">Register</a>
-        <a class="navlink secondary" href="survey.html">Survey</a>
+    <div class="header-content">
+      <h1>Web Systems and Technologies Data Portal</h1>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="register.html">Account Registration</a></li>
+          <li><a href="survey.html">Survey Page</a></li>
+        </ul>
       </nav>
     </div>
   </header>
@@ -28,15 +23,12 @@
   <main class="container">
     <section class="card">
       <h2>Service Feedback Form</h2>
-      <p class="help">
-        ["here the survey :P"]
-      </p>
+      <p class="help">Please fill out the details below to help us improve our services.</p>
 
-      <form action="thankyou.html" method="post">
+      <form action="thankyou.html" method="POST">
 
         <fieldset>
           <legend>Section 1: Personal Identification</legend>
-
           <div class="form-grid">
             <div class="field">
               <label for="fullName">Full Name</label>
@@ -55,11 +47,10 @@
                 name="phone"
                 type="tel"
                 required
-                placeholder="Enter your phone number"
+                placeholder="09xxxxxxxxx"
                 pattern="^(09|\+639)\d{9}$"
                 title="Use PH format: 09xxxxxxxxx or +639xxxxxxxxx"
               />
-              <small class="help">Valid formats: 09xxxxxxxxx or +639xxxxxxxxx</small>
             </div>
           </div>
         </fieldset>
@@ -68,7 +59,6 @@
 
         <fieldset>
           <legend>Section 2: Experience Rating</legend>
-
           <div class="field">
             <label>Overall Satisfaction</label>
             <div class="options">
@@ -88,9 +78,7 @@
           </div>
 
           <div class="field" style="margin-top:12px;">
-            <label>Which features did you use? (select at least 4)</label>
-            <small class="help">You may select multiple options.</small>
-
+            <label>Which features did you use?</label>
             <div class="options">
               <div class="inline">
                 <input id="f1" name="features" type="checkbox" value="Search" />
@@ -107,10 +95,6 @@
               <div class="inline">
                 <input id="f4" name="features" type="checkbox" value="Reports" />
                 <label for="f4">Reports</label>
-              </div>
-              <div class="inline">
-                <input id="f5" name="features" type="checkbox" value="Help Center" />
-                <label for="f5">Help Center</label>
               </div>
             </div>
           </div>
@@ -131,7 +115,6 @@
 
         <fieldset>
           <legend>Section 3: Detailed Feedback</legend>
-
           <div class="form-grid">
             <div class="field">
               <label for="serviceDate">Date of Service</label>
@@ -140,33 +123,27 @@
 
             <div class="field">
               <label for="frequency">Frequency of Use (1–30)</label>
-              <input id="frequency" name="frequency" type="number" min="1" max="30" required placeholder="Enter a number between 1-30" />
+              <input id="frequency" name="frequency" type="number" min="1" max="30" required placeholder="1-30" />
             </div>
           </div>
 
           <div class="field" style="margin-top:12px;">
             <label for="suggestions">Suggestions for Improvement</label>
-            <textarea
-              id="suggestions"
-              name="suggestions"
-              rows="6"
-              required
-              placeholder="Write your suggestions or feedback here..."
-            ></textarea>
+            <textarea id="suggestions" name="suggestions" rows="4" required placeholder="Write your suggestions here..."></textarea>
           </div>
         </fieldset>
 
-        <div class="buttons">
-          <button class="primary" type="submit">Send Feedback</button>
-          <button class="ghost" type="reset">Clear Form</button>
-          <a class="btn ghost" href="index.html">Back to Home</a>
+        <div class="action-buttons">
+          <button class="btn btn-primary" type="submit">Send Feedback</button>
+          <button class="btn btn-secondary" type="reset">Clear Form</button>
+          <a class="btn btn-secondary" href="index.html">Back to Home</a>
         </div>
       </form>
     </section>
   </main>
 
-  <footer class="container">
-    (James Rain M. Ticao · Justin Daniel B. Granada · Justin J. Olandag |  AM15  |  ITS123L  )
+  <footer>
+    <p>James Rain M. Ticao · Justin Daniel B. Granada · Justin J. Olandag | AM15 | ITS123L</p>
   </footer>
 </body>
 </html>
